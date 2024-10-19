@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+body, html {
+  font-family: "Playfair Display", serif;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .content-video {
+  position: absolute;
+  z-index: 10;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.wrapper .content-video .Tech-Yard {
+  position: relative;
+  top: 100px;
+  gap: 170px;
+  font-weight: 900;
+  display: flex;
+  font-size: 3rem;
+}
+.wrapper .content-video .Tech-Yard div {
+  margin: 0 10px;
+}
+.wrapper .content-video .Hub-IT {
+  position: relative;
+  top: -110px;
+  font-weight: 900;
+  display: flex;
+  font-size: 3rem;
+}
+.wrapper .content-video .Hub-IT div {
+  margin: 0 10px;
+}
+.wrapper .content-video .images img {
+  width: 330px;
+  height: 310px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  animation: turner 10s infinite;
+}
+.wrapper .carousel1-container {
+  position: relative;
+  z-index: 1;
+  width: 115%;
+  height: 75vh;
+}
+.wrapper .carousel1-container .carousel1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.wrapper .carousel1-container .carousel1 .carousel1-item {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.wrapper .carousel1-container .carousel1 .carousel1-item.active {
+  left: 0;
+  opacity: 1;
+}
+.wrapper .carousel1-container .carousel1 .video-bg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@keyframes turner {
+  0%, 100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+}
+#sidebar {
+  background: #333;
+  color: white;
+  padding: 15px;
+  position: fixed;
+  width: 200px;
+  top: 0;
+  left: -250px; /* Sidebar hidden by default */
+  height: 100vh;
+  transition: left 0.3s;
+  z-index: 100;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+@media (max-width: 991px) {
+  #sidebar {
+    left: -250px; /* Sidebar hidden by default on small screens */
+  }
+  #sidebar.active {
+    left: 0; /* Sidebar appears when active */
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper .content-video {
+    position: absolute;
+    z-index: 10;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .wrapper .content-video .Tech-Yard {
+    position: relative;
+    top: 100px;
+    gap: 170px;
+    font-weight: 600;
+    display: flex;
+    font-size: 2rem;
+  }
+  .wrapper .content-video .Tech-Yard div {
+    margin: 0 10px;
+  }
+  .wrapper .content-video .Hub-IT {
+    position: relative;
+    top: -110px;
+    font-weight: 600;
+    display: flex;
+    font-size: 2rem;
+  }
+  .wrapper .content-video .Hub-IT div {
+    margin: 0 10px;
+  }
+  .wrapper .content-video .images img {
+    width: 250px;
+    height: 250px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    animation: turner 10s infinite;
+  }
+  .wrapper .carousel1-container {
+    position: relative;
+    z-index: 1;
+    width: 115%;
+    height: 75vh;
+  }
+  .wrapper .carousel1-container .carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .wrapper .carousel1-container .carousel .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .wrapper .carousel1-container .carousel .carousel-item.active {
+    left: 0;
+    opacity: 1;
+  }
+  .wrapper .carousel1-container .carousel .video-bg {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.why-choose-us h2 {
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.why-choose-us p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.why-choose-us .col-md-3 img {
+  margin-bottom: 15px;
+}
+
+.why-choose-us h4 {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.contact-social {
+  background-color: #f9f9f9;
+  padding-top: 30px;
+}
+
+.contact-social h3 {
+  font-family: "Georgia", serif;
+  font-weight: bold;
+}
+
+.contact-social p, .contact-social ul {
+  font-size: 14px;
+}
+
+.contact-social ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-social ul li {
+  margin: 5px 0;
+}
+
+.contact-social ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.contact-social ul li a:hover {
+  text-decoration: underline;
+}
+
+.contact-social .row .col-12 a img {
+  margin: 0 10px;
+}
+
+.contact-social .row .col-12 h4 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.best-sales {
+  margin-top: 5rem;
+}
+.best-sales h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.best-sales .carousel {
+  position: relative;
+}
+.best-sales .carousel .carousel-indicators {
+  bottom: -50px;
+}
+.best-sales .carousel .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+  margin: 0 5px;
+}
+.best-sales .carousel .carousel-indicators button.active {
+  background-color: #007bff;
+}
+.best-sales .carousel .carousel-control-prev,
+.best-sales .carousel .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Center vertically in the middle of the slider */
+  top: 50%;
+  transform: translateY(-50%);
+}
+.best-sales .carousel .carousel-control-prev {
+  left: -50px; /* You can adjust the value to move it further left */
+}
+.best-sales .carousel .carousel-control-next {
+  right: -50px; /* You can adjust the value to move it further right */
+}/*# sourceMappingURL=styles.css.map */

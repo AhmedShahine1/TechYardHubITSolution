@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Yard Hub - Laptops & Apple Services</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar for large screens -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/file.enc" alt="Logo" style="width: 50px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center">
+        <a href="#" class="nav-link text-white mx-2">
+          <i class="bi bi-person"></i>
+        </a>
+        <a href="#" class="nav-link text-white mx-2">
+          <i class="bi bi-cart"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar for small screens -->
+  <nav id="sidebar" class="d-lg-none">
+    <div class="sidebar-header">
+      <h3>Tech Yard Hub</h3>
+    </div>
+    <ul class="list-unstyled components">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content section -->
+  <section class="wrapper container">
+
+    <!-- Custom Carousel for videos -->
+    <div class="carousel1-container">
+      <div class="carousel1">
+        <div class="carousel1-item active">
+          <video autoplay muted loop class="video-bg">
+            <source src="assets/Video1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="carousel1-item">
+          <video autoplay muted loop class="video-bg">
+            <source src="assets/Video2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="carousel1-item">
+          <video autoplay muted loop class="video-bg">
+            <source src="assets/video3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Best Sales Section -->
+<section class="best-sales container my-5">
+  <h2 class="text-center mb-4">Best Apple Laptop & PC Sales</h2>
+  <div id="salesCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#salesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#salesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+
+    <!-- Carousel Content -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="MacBook Pro">
+              <div class="card-body">
+                <h5 class="card-title">Apple MacBook Pro</h5>
+                <p class="card-text">The latest high-performance MacBook for professionals.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/Apple MacBook Air.jpg" class="card-img-top" alt="MacBook Air">
+              <div class="card-body">
+                <h5 class="card-title">Apple MacBook Air</h5>
+                <p class="card-text">Lightweight and portable with impressive performance.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="MacBook 13">
+              <div class="card-body">
+                <h5 class="card-title">Apple MacBook (13-inch)</h5>
+                <p class="card-text">Compact design with powerful performance for everyday tasks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="iMac">
+              <div class="card-body">
+                <h5 class="card-title">Apple iMac</h5>
+                <p class="card-text">Stunning 24-inch display with powerful M1 chip performance.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/Apple Mac Mini.jpg" class="card-img-top" alt="Mac Mini">
+              <div class="card-body">
+                <h5 class="card-title">Apple Mac Mini</h5>
+                <p class="card-text">Compact desktop with incredible power for any task.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/Apple Mac Studio.jpg" class="card-img-top" alt="Mac Studio">
+              <div class="card-body">
+                <h5 class="card-title">Apple Mac Studio</h5>
+                <p class="card-text">Professional desktop with unmatched performance for creatives.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#salesCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#salesCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+  <!-- What Is Tech Yard Hub Section -->
+  <section class="company-info container my-5">
+    <h2 class="text-center mb-4">What Is Tech Yard Hub?</h2>
+    <p>
+      Tech Yard Hub is a trusted retailer specializing in laptops and services related to Apple product imports. We provide top-quality Apple devices, accessories, and offer tailored services for Apple imports from abroad, ensuring the best prices and fastest delivery.
+    </p>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us container text-center my-5">
+    <h2>Why Choose Us?</h2>
+    <p>Tech Yard Hub is your go-to source for all your Apple and laptop needs. Here’s why:</p>
+    <div class="row text-center">
+      <div class="col-md-3">
+        <img src="assets/icon-04.png" alt="Big Discounts" width="100">
+        <h4>Big Discounts</h4>
+        <p>We offer the best prices for high-quality Apple products and laptops.</p>
+      </div>
+      <div class="col-md-3">
+        <img src="assets/icon-01.png" alt="Fast Shipping" width="100">
+        <h4>Fast Shipping</h4>
+        <p>Receive your items quickly with our expedited shipping options.</p>
+      </div>
+      <div class="col-md-3">
+        <img src="assets/24-hours-support.png" alt="24/7 Support" width="100">
+        <h4>24/7 Support</h4>
+        <p>Our team is here to assist you anytime with your queries.</p>
+      </div>
+      <div class="col-md-3">
+        <img src="assets/warranty.png" alt="Warranty" width="100">
+        <h4>Extended Warranty</h4>
+        <p>We provide extended warranties for peace of mind with your purchases.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Tech Yard Hub. All rights reserved.</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+      <li class="list-inline-item"><a href="#" class="text-white">Terms of Service</a></li>
+      <li class="list-inline-item"><a href="mailto:support@techyardhub.com" class="text-white">Email Us</a></li>
+    </ul>
+    <div class="social-media mt-3">
+      <a href="https://www.facebook.com" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.twitter.com" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+      <a href="https://www.instagram.com" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
