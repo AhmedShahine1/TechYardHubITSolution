@@ -99,8 +99,8 @@
       </div>
     </section>
 
-    <!-- Best Sales Section -->
-    <section class="best-sales container my-5">
+    <!-- Best Sales Section To Big Screen-->
+    <section class="best-sales container my-5 d-none d-md-block">
       <h2 class="text-center mb-4">Best Apple Laptop & PC Sales</h2>
       <div id="salesCarousel" class="carousel slide" data-bs-ride="carousel">
 
@@ -115,7 +115,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-12 col-md-4">
                 <div class="card">
                   <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="MacBook Pro">
                   <div class="card-body">
@@ -124,7 +124,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-12 col-md-4">
                 <div class="card">
                   <img src="assets/Apple MacBook Air.jpg" class="card-img-top" alt="MacBook Air">
                   <div class="card-body">
@@ -133,7 +133,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-12 col-md-4">
                 <div class="card">
                   <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="MacBook 13">
                   <div class="card-body">
@@ -147,7 +147,7 @@
 
           <div class="carousel-item">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-12 col-md-4">
                 <div class="card">
                   <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="iMac">
                   <div class="card-body">
@@ -156,7 +156,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-12 col-md-4">
                 <div class="card">
                   <img src="assets/Apple Mac Mini.jpg" class="card-img-top" alt="Mac Mini">
                   <div class="card-body">
@@ -165,7 +165,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-12 col-md-4">
                 <div class="card">
                   <img src="assets/Apple Mac Studio.jpg" class="card-img-top" alt="Mac Studio">
                   <div class="card-body">
@@ -173,6 +173,83 @@
                     <p class="card-text">Professional desktop with unmatched performance for creatives.</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#salesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#salesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Best Sales Section for Small Screens -->
+    <section class="best-sales container my-5 d-md-none">
+      <h2 class="text-center mb-4">Best Apple Laptop & PC Sales</h2>
+      <div id="salesCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#salesCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#salesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+
+        <!-- Carousel Content -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card">
+              <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="MacBook Pro">
+              <div class="card-body">
+                <h5 class="card-title">Apple MacBook Pro</h5>
+                <p class="card-text">The latest high-performance MacBook for professionals.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card">
+              <img src="assets/Apple MacBook Air.jpg" class="card-img-top" alt="MacBook Air">
+              <div class="card-body">
+                <h5 class="card-title">Apple MacBook Air</h5>
+                <p class="card-text">Lightweight and portable with impressive performance.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card">
+              <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="MacBook 13">
+              <div class="card-body">
+                <h5 class="card-title">Apple MacBook (13-inch)</h5>
+                <p class="card-text">Compact design with powerful performance for everyday tasks.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card">
+              <img src="assets/Apple Mac Mini.jpg" class="card-img-top" alt="Mac Mini">
+              <div class="card-body">
+                <h5 class="card-title">Apple Mac Mini</h5>
+                <p class="card-text">Compact desktop with incredible power for any task.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card">
+              <img src="assets/Apple Mac Studio.jpg" class="card-img-top" alt="Mac Studio">
+              <div class="card-body">
+                <h5 class="card-title">Apple Mac Studio</h5>
+                <p class="card-text">Professional desktop with unmatched performance for creatives.</p>
               </div>
             </div>
           </div>
@@ -206,14 +283,17 @@
       <div class="card mb-3" style="max-width: 1000px; margin: 0 auto;">
         <div class="row g-0">
           <div class="col-md-4"> <!-- Increase the width to 4/12 columns -->
-            <img src="assets/Discover Innovation with Apple Devices.jpg" alt="Inspiration to Buy" class="img-fluid rounded-start"
-              style="height: 250px; width: 100%; object-fit: cover;"> <!-- Increased height to 250px -->
+            <img src="assets/Discover Innovation with Apple Devices.jpg" alt="Inspiration to Buy"
+              class="img-fluid rounded-start" style="height: 250px; width: 100%; object-fit: cover;">
+            <!-- Increased height to 250px -->
           </div>
           <div class="col-md-8"> <!-- Adjust to fill the remaining space -->
             <div class="card-body">
               <h5 class="card-title">Discover Innovation with Apple Devices</h5>
               <p class="card-text">
-                At Tech Yard Hub, we offer a variety of Apple laptops and desktops to help you unleash your creativity and productivity. Whether you're editing videos, developing software, or simply browsing the web, our cutting-edge products guarantee the best performance, reliability, and style.
+                At Tech Yard Hub, we offer a variety of Apple laptops and desktops to help you unleash your creativity
+                and productivity. Whether you're editing videos, developing software, or simply browsing the web, our
+                cutting-edge products guarantee the best performance, reliability, and style.
               </p>
               <p class="card-text">
                 Ready to take the next step? Explore our extensive collection today!
@@ -224,7 +304,7 @@
         </div>
       </div>
     </section>
-            
+
 
     <!-- Why Choose Us Section -->
     <section class="why-choose-us container text-center my-5">
