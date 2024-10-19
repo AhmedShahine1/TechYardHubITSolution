@@ -32,4 +32,14 @@ $(document).ready(function () {
     });
   });
   
-  
+  // scripts.js
+$(document).ready(function () {
+  setTimeout(function () {
+      $('.preloader').fadeOut(500); // Fade out preloader
+      $('#sidebar').fadeIn(500); // Fade in main content
+      $('#Main').fadeIn(500); // Fade in main content
+      $('#Footer').fadeIn(500); // Fade in main content
+      $('#sidebarnav').fadeIn(500); // Fade in main content
+
+  }, 3000); // Show preloader for 3 seconds
+});

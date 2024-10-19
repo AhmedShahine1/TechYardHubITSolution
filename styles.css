@@ -5,6 +5,7 @@ body, html {
 }
 
 .wrapper {
+  margin-top: 75px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -21,39 +22,11 @@ body, html {
   align-items: center;
   color: white;
 }
-.wrapper .content-video .Tech-Yard {
-  position: relative;
-  top: 100px;
-  gap: 170px;
-  font-weight: 900;
-  display: flex;
-  font-size: 3rem;
-}
-.wrapper .content-video .Tech-Yard div {
-  margin: 0 10px;
-}
-.wrapper .content-video .Hub-IT {
-  position: relative;
-  top: -110px;
-  font-weight: 900;
-  display: flex;
-  font-size: 3rem;
-}
-.wrapper .content-video .Hub-IT div {
-  margin: 0 10px;
-}
-.wrapper .content-video .images img {
-  width: 330px;
-  height: 310px;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-  animation: turner 10s infinite;
-}
 .wrapper .carousel1-container {
   position: relative;
   z-index: 1;
-  width: 115%;
-  height: 75vh;
+  width: 100vw;
+  height: 90vh;
 }
 .wrapper .carousel1-container .carousel1 {
   position: relative;
@@ -294,4 +267,60 @@ body, html {
 }
 .best-sales .carousel .carousel-control-next {
   right: -50px; /* You can adjust the value to move it further right */
+}
+
+/* Navbar CSS to keep it static (fixed at the top) */
+.navbar {
+  position: fixed;
+  padding-right: 50px;
+  padding-left: 50px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height for preloader */
+  background-color: #282c34; /* Background color */
+}
+
+.loading-text {
+  color: white; /* Text color */
+  font-size: 3rem; /* Font size */
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 2s forwards, bounce 1s infinite alternate; /* Animation */
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/* Bounce animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+.container {
+  opacity: 0;
+  scale: 0.8;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 50px 36%;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }/*# sourceMappingURL=styles.css.map */
