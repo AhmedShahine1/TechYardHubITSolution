@@ -10,16 +10,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
-    as="style">
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-
-  <div class="preloader">
-    <h1 class="loading-text">Tech Yard Hub IT</h1>
+  <div id="preloader">
+    <h1>Tech Yard Hub</h1>
   </div>
   <!-- Navbar for large screens -->
   <header id="sidebarnav" style="display: none;">
@@ -99,83 +96,17 @@
       </div>
     </section>
 
-    <!-- Best Sales Section To Big Screen-->
-    <section class="best-sales container my-5 d-none d-md-block">
+    <!-- Best Sales Section for Medium & Large Screens -->
+    <section class="best-sales container my-5">
       <h2 class="text-center mb-4">Best Apple Laptop & PC Sales</h2>
-      <div id="salesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div id="salesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="false">
 
         <!-- Indicators -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#salesCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#salesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        </div>
+        <div class="carousel-indicators" id="carouselIndicators"></div>
 
         <!-- Carousel Content -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="MacBook Pro">
-                  <div class="card-body">
-                    <h5 class="card-title">Apple MacBook Pro</h5>
-                    <p class="card-text">The latest high-performance MacBook for professionals.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <img src="assets/Apple MacBook Air.jpg" class="card-img-top" alt="MacBook Air">
-                  <div class="card-body">
-                    <h5 class="card-title">Apple MacBook Air</h5>
-                    <p class="card-text">Lightweight and portable with impressive performance.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="MacBook 13">
-                  <div class="card-body">
-                    <h5 class="card-title">Apple MacBook (13-inch)</h5>
-                    <p class="card-text">Compact design with powerful performance for everyday tasks.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="iMac">
-                  <div class="card-body">
-                    <h5 class="card-title">Apple iMac</h5>
-                    <p class="card-text">Stunning 24-inch display with powerful M1 chip performance.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <img src="assets/Apple Mac Mini.jpg" class="card-img-top" alt="Mac Mini">
-                  <div class="card-body">
-                    <h5 class="card-title">Apple Mac Mini</h5>
-                    <p class="card-text">Compact desktop with incredible power for any task.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <img src="assets/Apple Mac Studio.jpg" class="card-img-top" alt="Mac Studio">
-                  <div class="card-body">
-                    <h5 class="card-title">Apple Mac Studio</h5>
-                    <p class="card-text">Professional desktop with unmatched performance for creatives.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="carousel-inner" id="carouselContent">
+          <!-- Carousel items will be dynamically inserted here -->
         </div>
 
         <!-- Carousel Controls -->
@@ -191,68 +122,16 @@
     </section>
 
     <!-- Best Sales Section for Small Screens -->
-    <section class="best-sales container my-5 d-md-none">
+    <section class="best-sales small-screen container my-5 d-none d-md-none">
       <h2 class="text-center mb-4">Best Apple Laptop & PC Sales</h2>
-      <div id="salesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div id="salesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="false">
 
-        <!-- Indicators -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#salesCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#salesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        </div>
+        <!-- Indicators will be dynamically generated here -->
+        <div class="carousel-indicators" id="carouselIndicators"></div>
 
         <!-- Carousel Content -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="card">
-              <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="MacBook Pro">
-              <div class="card-body">
-                <h5 class="card-title">Apple MacBook Pro</h5>
-                <p class="card-text">The latest high-performance MacBook for professionals.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="card">
-              <img src="assets/Apple MacBook Air.jpg" class="card-img-top" alt="MacBook Air">
-              <div class="card-body">
-                <h5 class="card-title">Apple MacBook Air</h5>
-                <p class="card-text">Lightweight and portable with impressive performance.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="card">
-              <img src="assets/Apple MacBook (13-inch).jpg" class="card-img-top" alt="MacBook 13">
-              <div class="card-body">
-                <h5 class="card-title">Apple MacBook (13-inch)</h5>
-                <p class="card-text">Compact design with powerful performance for everyday tasks.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="card">
-              <img src="assets/Apple Mac Mini.jpg" class="card-img-top" alt="Mac Mini">
-              <div class="card-body">
-                <h5 class="card-title">Apple Mac Mini</h5>
-                <p class="card-text">Compact desktop with incredible power for any task.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="card">
-              <img src="assets/Apple Mac Studio.jpg" class="card-img-top" alt="Mac Studio">
-              <div class="card-body">
-                <h5 class="card-title">Apple Mac Studio</h5>
-                <p class="card-text">Professional desktop with unmatched performance for creatives.</p>
-              </div>
-            </div>
-          </div>
+        <div class="carousel-inner" id="carouselContent">
+          <!-- The carousel items will be dynamically generated here -->
         </div>
 
         <!-- Carousel Controls -->
@@ -268,17 +147,83 @@
     </section>
 
     <!-- What Is Tech Yard Hub Section -->
-    <section class="company-info container my-5">
+    <section class="company-info container my-5" style=" padding: 2rem; border-radius: 0.5rem;">
       <h2 class="text-center mb-4">What Is Tech Yard Hub?</h2>
-      <p>
-        Tech Yard Hub is a trusted retailer specializing in laptops and services related to Apple product imports. We
-        provide top-quality Apple devices, accessories, and offer tailored services for Apple imports from abroad,
-        ensuring the best prices and fastest delivery.
-      </p>
+      <div class="card mb-3">
+        <div class="row g-0 align-items-center">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Who We Are</h5>
+              <p class="card-text">
+                Tech Yard Hub is a trusted retailer specializing in laptops and services related to Apple product
+                imports. We provide top-quality Apple devices, accessories, and offer tailored services for Apple
+                imports from abroad, ensuring the best prices and fastest delivery.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="assets/logo.png" alt="Tech Yard Hub Logo" class="img-fluid rounded-end" style="height: auto;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Announcements Section -->
+    <section class="announcement-section container my-5">
+      <h2 class="text-center mb-4">New Announcements</h2>
+      <div id="announcementCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#announcementCarousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#announcementCarousel" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        </div>
+
+        <!-- Carousel Content -->
+        <div class="carousel-inner">
+          <!-- Announcement 1: MacBook Air with M3 -->
+          <div class="carousel-item active">
+            <div class="announcement-carousel" style="background-image: url('assets/announcement1.jpg');">
+              <div class="overlay"></div>
+              <div class="text-center text-white d-flex justify-content-center align-items-center h-100">
+                <div class="text-column" style="max-width: 700px;"> <!-- Set a max width for the text -->
+                  <h4>Introducing the MacBook Air with M3</h4>
+                  <p>The all-new MacBook Air powered by the M3 chip delivers exceptional performance and efficiency.
+                    Perfect for professionals and students alike!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Announcement 2: MacBook Pro 2023 -->
+          <div class="carousel-item">
+            <div class="announcement-carousel" style="background-image: url('assets/announcement2.jpg');">
+              <div class="overlay"></div>
+              <div class="text-center text-white d-flex justify-content-center align-items-center h-100">
+                <div class="text-column" style="max-width: 700px;"> <!-- Set a max width for the text -->
+                  <h4>Launch of the MacBook Pro 2023</h4>
+                  <p>Experience the future of performance with the new MacBook Pro 2023, featuring the latest technology
+                    for unparalleled power and efficiency.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#announcementCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#announcementCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </section>
 
     <!-- Motivation Section to Buy Products (Horizontal Card) -->
-    <section class="container my-5">
+    <section class="container my-5 motivation-section">
       <h2 class="text-center mb-4">Unlock the Possibilities with Tech Yard Hub</h2>
       <div class="card mb-3" style="max-width: 1000px; margin: 0 auto;">
         <div class="row g-0">
@@ -306,36 +251,58 @@
     </section>
 
 
+
     <!-- Why Choose Us Section -->
     <section class="why-choose-us container text-center my-5">
       <h2>Why Choose Us?</h2>
       <p>Tech Yard Hub is your go-to source for all your Apple and laptop needs. Here’s why:</p>
       <div class="row text-center">
         <div class="col-md-3">
-          <img src="assets/icon-04.png" alt="Big Discounts" width="100">
-          <h4>Big Discounts</h4>
-          <p>We offer the best prices for high-quality Apple products and laptops.</p>
+          <div class="card mb-4">
+            <img src="assets/icon-04.png" alt="Big Discounts" class="card-img-top"
+              style="width: 100px; height: auto; margin: 0 auto;">
+            <div class="card-body">
+              <h4 class="card-title">Big Discounts</h4>
+              <p class="card-text">We offer the best prices for high-quality Apple products and laptops.</p>
+            </div>
+          </div>
         </div>
         <div class="col-md-3">
-          <img src="assets/icon-01.png" alt="Fast Shipping" width="100">
-          <h4>Fast Shipping</h4>
-          <p>Receive your items quickly with our expedited shipping options.</p>
+          <div class="card mb-4">
+            <img src="assets/icon-01.png" alt="Fast Shipping" class="card-img-top"
+              style="width: 100px; height: auto; margin: 0 auto;">
+            <div class="card-body">
+              <h4 class="card-title">Fast Shipping</h4>
+              <p class="card-text">Receive your items quickly with our expedited shipping options.</p>
+            </div>
+          </div>
         </div>
         <div class="col-md-3">
-          <img src="assets/24-hours-support.png" alt="24/7 Support" width="100">
-          <h4>24/7 Support</h4>
-          <p>Our team is here to assist you anytime with your queries.</p>
+          <div class="card mb-4">
+            <img src="assets/24-hours-support.png" alt="24/7 Support" class="card-img-top"
+              style="width: 100px; height: auto; margin: 0 auto;">
+            <div class="card-body">
+              <h4 class="card-title">24/7 Support</h4>
+              <p class="card-text">Our team is here to assist you anytime with your queries.</p>
+            </div>
+          </div>
         </div>
         <div class="col-md-3">
-          <img src="assets/warranty.png" alt="Warranty" width="100">
-          <h4>Extended Warranty</h4>
-          <p>We provide extended warranties for peace of mind with your purchases.</p>
+          <div class="card mb-4">
+            <img src="assets/warranty.png" alt="Warranty" class="card-img-top"
+              style="width: 100px; height: auto; margin: 0 auto;">
+            <div class="card-body">
+              <h4 class="card-title">Extended Warranty</h4>
+              <p class="card-text">We provide extended warranties for peace of mind with your purchases.</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="mt-4">
         <a href="store.html" class="btn btn-primary btn-lg">Visit Our Store</a>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->

@@ -60,6 +60,48 @@ body, html {
   }
 }
 
+    /* Preloader Styles */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #preloader h1 {
+      background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 10vw;
+      font-family: "Source Sans Pro", sans-serif;
+      animation: reveal 3000ms ease-in-out forwards 200ms,
+                 glow 2500ms linear infinite 2000ms;
+    }
+
+    @keyframes reveal {
+      80% {
+        letter-spacing: 8px;
+      }
+      100% {
+        background-size: 300% 300%;
+      }
+    }
+
+    @keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #fff;
+      }
+    }
+    .hidden{
+      display: none;
+    }
 @keyframes turner {
   0%, 100% { transform: rotateY(0deg); }
   50% { transform: rotateY(360deg); }
@@ -301,14 +343,6 @@ body, html {
   z-index: 1000; /* Ensure the navbar is above other content */
 }
 
-.preloader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full height for preloader */
-  background-color: #282c34; /* Background color */
-}
-
 .loading-text {
   color: white; /* Text color */
   font-size: 3rem; /* Font size */
@@ -346,3 +380,104 @@ body, html {
       scale: 1;
     }
   }
+
+  *::-webkit-scrollbar {
+    height: 7px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #858B8C;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #9BA1A3;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #D2DBDE;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #000000;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #4A5050;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #969A9A;
+  }
+
+   /* Custom CSS for announcement section */
+   .announcement-carousel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .announcement-carousel .overlay {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+  }
+
+  .announcement-carousel h4,
+  .announcement-carousel p {
+    position: relative;
+    z-index: 1;
+  }
+
+  .why-choose-us .card {
+    background-color: #f8f9fa; // Light background
+    border: 1px solid #dee2e6; // Light border
+    border-radius: 10px; // Rounded corners
+  }
+  
+  .why-choose-us .card-title {
+    font-weight: bold; // Bold titles
+  }
+
+  .motivation-section {
+    background-color: #f0f8ff; // Example light color (AliceBlue)
+    padding: 20px; // Optional: Add some padding to the section
+    border-radius: 10px; // Optional: Rounded corners for the section
+  }
+  
+  .company-info {
+    padding: 2rem; // Padding for the section
+    border-radius: 0.5rem; // Rounded corners for the card
+  
+    h2 {
+      font-size: 2.5rem; // Title size
+      margin-bottom: 1.5rem; // Space below title
+    }
+  
+    .card {
+      background-color: transparent; // Make the card transparent
+      border: none; // Remove card border
+    }
+  
+    .card-title {
+      font-size: 1.8rem; // Title size within card
+    }
+    img {
+      background-color: black; // Set background color to black
+      height: 100%; // Make sure the image covers the height
+      object-fit: cover; // Cover the area
+    }
+  }
+  
