@@ -1,9 +1,48 @@
 $(document).ready(function () {
     // Carousel auto-change logic
-    let items = $(".Large-screen .carousel-item");
-    let itemsSmall = $(".small-screen .carousel-item");
+    let items = $(".best-sales .carousel-item");
     let currentItem = 0;
-  
+    let itemsWrapper = $(".wrapper .carousel-item");
+    let currentItemWrapper = 0;
+
+    let videoTimeout;
+
+    function moveToNextSlide() {
+      clearTimeout(videoTimeout); // Clear the existing timeout for safety
+
+      // Hide the current item and show the next item
+      itemsWrapper.eq(currentItemWrapper).removeClass('active');
+      currentItemWrapper = (currentItemWrapper + 1) % itemsWrapper.length; // Loop back to the first item
+      itemsWrapper.eq(currentItemWrapper).addClass('active');
+
+      // Get the video element of the next item and start the timer
+      let nextVideo = itemsWrapper.eq(currentItemWrapper).find('video')[0];
+      startVideoTimer(nextVideo);
+    }
+
+    function startVideoTimer(video) {
+      if (video) {
+        video.play().then(() => {
+          // Get the video's duration and set a timeout for the next slide transition
+          let videoDuration = video.duration * 1000; // Convert to milliseconds
+          videoTimeout = setTimeout(moveToNextSlide, videoDuration); // Transition to the next slide after the video ends
+        }).catch((error) => {
+          console.log('Error playing video: ', error);
+          // Handle error, e.g., fallback behavior
+        });
+      }
+    }
+
+    // Wait for user interaction to start playing videos
+    $(document).on('click', function () {
+      // Start the carousel with the first video's timer after user interaction
+      let firstVideo = itemsWrapper.eq(currentItemWrapper).find('video')[0];
+      startVideoTimer(firstVideo);
+      $(document).off('click'); // Remove this handler after first interaction
+    });
+
+    // Optionally, you can also listen for the 'ended' event on videos if you want to handle it differently
+    itemsWrapper.find('video').on('ended', moveToNextSlide);
     function showItemLarge(index) {
       items.removeClass("active");
       items.eq(index).addClass("active");
@@ -14,7 +53,7 @@ $(document).ready(function () {
     }
     setInterval(function () {
       const screenWidth = window.innerWidth;
-      const itemsPerSlide = screenWidth >= 600 ? items.length%3 : itemsSmall.length;
+      const itemsPerSlide = items.length;
       currentItem = (currentItem + 1) % itemsPerSlide;
       screenWidth >= 600 ? showItemLarge(currentItem):showItemSmall(currentItem);
     }, 10000); // Auto change every 10 seconds
